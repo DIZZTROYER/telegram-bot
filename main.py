@@ -1,10 +1,10 @@
-
+import os
 import logging
 from typing import Final
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
 
-TOKEN_API: Final = "8268939148:AAFzJtecBpryNJoTItfbuXmL2CLWFiIchIQ"
+TOKEN_API = os.getenv('TELEGRAM_TOKEN')
 BOT_USERNAME: Final = "@Yunoball_bot"
 
 
@@ -176,4 +176,5 @@ def main() -> None:
     application.run_polling(allowed_updates=Update.ALL_TYPES)
 
 if __name__ == '__main__':
+
     main()
