@@ -15,7 +15,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-# Anime database with genres and descriptions
+# Genres and descriptions
 ANIME_DATA = {
     "Action": {
         "Attack on Titan": "A masterpiece of storytelling with incredible world-building. The plot twists are mind-blowing and the animation quality is top-tier. Themes of freedom, humanity, and sacrifice make this a must-watch. The character development is phenomenal, especially Eren's transformation throughout the series.",
@@ -69,7 +69,6 @@ ANIME_DATA = {
 }
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Send a message when the command /start is issued."""
     keyboard = []
     
     for genre in ANIME_DATA.keys():
@@ -84,7 +83,6 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     )
 
 async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Handle button callbacks."""
     query = update.callback_query
     await query.answer()
     
@@ -142,7 +140,6 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         )
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Send a message when the command /help is issued."""
     help_text = """
 🤖 Bot Help🍜
 
@@ -178,3 +175,4 @@ def main() -> None:
 if __name__ == '__main__':
 
     main()
+
