@@ -15,7 +15,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-# Genres and descriptions
+# Genres and Descriptions
 ANIME_DATA = {
     "Action": {
         "Attack on Titan": "A masterpiece of storytelling with incredible world-building. The plot twists are mind-blowing and the animation quality is top-tier. Themes of freedom, humanity, and sacrifice make this a must-watch. The character development is phenomenal, especially Eren's transformation throughout the series.",
@@ -175,4 +175,5 @@ def main() -> None:
 if __name__ == '__main__':
 
     main()
+
 
